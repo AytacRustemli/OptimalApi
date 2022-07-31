@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Entity.Models;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class IrshhadDbContext : IdentityDbContext<User>
+    public class IrshhadDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
            
@@ -24,14 +25,10 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductPicture> ProductPictures { get; set; }
         public DbSet<Comment> Comments { get; set; } 
-        
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            builder.Entity<User>().ToTable("Users");
-            builder.Entity<IdentityRole>().ToTable("Roles");
-        }
-
-
+        public DbSet<SliderPhoto> SliderPhotos { get; set; }
+        public DbSet<User> Users  { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderTracking> OrderTrackings { get; set; }
+        public DbSet<Paramaters> Paramaters { get; set; }
     }
 }

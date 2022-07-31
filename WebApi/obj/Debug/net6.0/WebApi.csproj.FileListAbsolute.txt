@@ -80,3 +80,4 @@ D:\K205\Back\WebApi\WebApi\obj\Debug\net6.0\WebApi.dll
 D:\K205\Back\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll
 D:\K205\Back\WebApi\WebApi\obj\Debug\net6.0\WebApi.pdb
 D:\K205\Back\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\K205\Back\WebApi\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

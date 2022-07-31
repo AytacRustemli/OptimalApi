@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IParentCategoryDal : IEntityRepository<ParentCategory>
     {
+        List<ParentCategory> GetParentCategory(int categoryId);
     }
 }

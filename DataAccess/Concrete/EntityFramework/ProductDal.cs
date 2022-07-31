@@ -68,8 +68,18 @@ namespace DataAccess.Concrete.EntityFramework
                     ProductPictures = pictures,
                     CoverPhoto = product.CoverPhoto,
                     IsSlider = product.IsSlider,
+                    SKU = product.SKU,
+                    IsStock = product.IsStock,
                     Rating = Math.Round(ratingSum, 1),
                     Comments = commentResult,
+                    Marka = product.Marka,
+                    Model = product.Model,
+                    Ekran = product.Ekran,
+                    RAM = product.RAM,
+                    ROM = product.ROM,
+                    Ceki = product.Ceki,
+                    Kamera = product.Kamera,
+                    Processor = product.Processor
                 };
 
                 return result;
@@ -124,7 +134,17 @@ namespace DataAccess.Concrete.EntityFramework
                         ProductPictures = pictures,
                         CoverPhoto = products[i].CoverPhoto,
                         IsSlider = products[i].IsSlider,
-                        Rating = Math.Round(ratingSum, 1)
+                        SKU = products[i].SKU,
+                        IsStock = products[i].IsStock,
+                        Rating = Math.Round(ratingSum, 1),
+                        Marka = products[i].Marka,
+                        Model = products[i].Model,
+                        Ceki = products[i].Ceki,
+                        Ekran = products[i].Ekran,
+                        Kamera = products[i].Kamera,
+                        RAM = products[i].RAM,
+                        ROM = products[i].ROM,
+                        Processor = products[i].Processor
                     };
                     result.Add(productList);
                 }

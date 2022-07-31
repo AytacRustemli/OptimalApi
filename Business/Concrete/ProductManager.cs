@@ -30,7 +30,7 @@ namespace Business.Concrete
                 SecondParentCategoryId = productDTO.SecondParentCategoryId,
                 Price = productDTO.Price,
                 CoverPhoto = productDTO.CoverPhoto,
-
+                SKU = productDTO.SKU,
             };
 
             _productDal.Add(product);

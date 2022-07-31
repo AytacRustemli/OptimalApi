@@ -13,6 +13,7 @@ namespace Business.Abstract
         void Remove(ParentCategory parentcategory);
         void Update(ParentCategory parentcategory);
         List<ParentCategory> GetAllParentCategories();
-        ParentCategory GetParentCategoryById(int id);
+        List<ParentCategory> GetParentCategoryById(int categoryId);
+
     }
 }

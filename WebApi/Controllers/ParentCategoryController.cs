@@ -36,6 +36,14 @@ namespace WebApi.Controllers
             return Ok(new { status = 200, message = parentcategory });
         }
 
+        [HttpGet("getbyId/{categoryId}")]
+        public async Task<IActionResult> ParentCategory(int categoryId)
+        {
+            var order = _parentcategoryManager.GetParentCategoryById(categoryId);
+            return Ok(new { status = 200, message = order });
+
+        }
+
         [HttpDelete("remove")]
         public IActionResult DeleteParentCategory(ParentCategory parentcategory)
         {

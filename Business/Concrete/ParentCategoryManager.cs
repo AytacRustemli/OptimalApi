@@ -29,9 +29,9 @@ namespace Business.Concrete
             return _parentCategoryDal.GetAll();
         }
 
-        public ParentCategory GetParentCategoryById(int id)
+        public List<ParentCategory> GetParentCategoryById(int categoryid)
         {
-            return _parentCategoryDal.Get(x => x.Id == id);
+            return _parentCategoryDal.GetParentCategory(categoryid);
         }
 
         public void Remove(ParentCategory parentcategory)
